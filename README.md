@@ -2,7 +2,7 @@
 Java final-project in client-server and mySql
 
 ___
-# Sql class 
+### Sql class 
 Will connect java code to MySQL (via jdbc driver)  
 Functions in use:
 * ConectingToSQL() - via driver, host, and password.
@@ -16,7 +16,7 @@ Functions in use:
    Note: For each query function - if user is Ternat - he will be redirected to his own table, 
    and so with Manager user. (By using int tbl)
 
-# Message class
+### Message class
 Will redirect user to his/her own functionality according to type(ternant/manager)
 Functions in use:
 * TernantFunctionality()
@@ -28,7 +28,7 @@ Functions in use:
 	* [4] Monthly income - from all users, ordered by months and full payment
 	 
 ___
-# MySQL part 
+## MySQL part 
 ```sql
 create database Committiee;
 
