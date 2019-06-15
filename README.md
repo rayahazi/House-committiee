@@ -2,9 +2,31 @@
 Java final-project in client-server and mySql
 
 ___
-Info will be uploaded soon...
+# Sql class 
+Will connect java code to MySQL (via jdbc driver)  
+Functions in use:
+* ConectingToSQL() - via driver, host, and password.
+* select_query() - Abstract select query function - will execute any type of select.
+* selectAll_query() - specific select query to show full table (ternant/manager).
+* delete_statement() - delete user from table.
+* update_statement() - will update username's password.
+* Login() - full menu for login option.
+* insertManager() and insertTernant() - will add new user to DB. 
 
+   Note: For each query function - if user is Ternat - he will be redirected to his own table, 
+   and so with Manager user. (By using int tbl)
 
+# Message class
+Will redirect user to his/her own functionality according to type(ternant/manager)
+Functions in use:
+* TernantFunctionality()
+	* Show user all previous payments
+* ManagerFunctionality() - using menu
+	* [1] Ternant payment plan(per months) - specific ternant's payments
+	* [2] Payment of all ternants in our building 
+	* [3] Update payment details for ternant 
+	* [4] Monthly income - from all users, ordered by months and full payment
+	 
 ___
 # MySQL part 
 ```sql
