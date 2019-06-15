@@ -2,6 +2,7 @@
 Java final-project in client-server and mySql
 
 ___
+## CODE
 ### Sql class 
 Will connect java code to MySQL (via jdbc driver)  
 Functions in use:
@@ -26,7 +27,16 @@ Functions in use:
 	* [2] Payment of all ternants in our building 
 	* [3] Update payment details for ternant 
 	* [4] Monthly income - from all users, ordered by months and full payment
-	 
+## Server
+* Socket handler
+* Socket handler send
+* TCP handler
+
+## Users
+* Person - high class
+* Manager - inherits Person
+* Ternant - inherits Person
+
 ___
 ## MySQL part 
 ```sql
