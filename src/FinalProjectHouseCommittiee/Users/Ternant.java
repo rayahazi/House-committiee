@@ -18,49 +18,32 @@ public class Ternant extends Person {
 
         while (true){
             System.out.println("-------------------" + "\n"
-                    +"\tResident menu" + "\n"
+                    +"\tTernant menu" + "\n"
                     +"-------------------" + "\n"
-                    + "1. Check what you've paid" + "\n"
-                    + "2. send eMail to committee" + "\n"
+                    + "[1] See your paayments" + "\n"                  
                     + "3. Quit");
-            String choice;
-            try { choice = scan.nextLine();
+            int choice;
+            try { choice = scan.nextInt();
                 switch (choice){
-                    case "1":
-                        check_what_paid();
-                        break;
-                    case "2":
-                        sendMail();
-                        break;
-                    case "3":
-                        ServerConnector.OutToServer().writeBytes("quit" + "\n");
+                    case 1:
+                        Payments();
+                        break;                    
+                    case 0:
+                        ServerConnector.OutToServer().writeBytes("quit\n");
                         return;
                     default: break;
                 }
-            } catch(NoSuchElementException e){e.getStackTrace();}
+            } catch(NoSuchElementException e){
+		    e.getStackTrace();
+	    }
         }
     }
 
-    // Function that check what paid
+    // Function to see ternant's payments
     private void check_what_paid() throws IOException {
         String str;
         ServerConnector.OutToServer().writeBytes("get_Paid_Months" + "\n");
         str = ServerConnector.InFromServer().readLine();
-        System.out.println("You've paid for months: " + str);
-        press_enter();
-    }
-
-    // function that send mail
-    private void sendMail() throws IOException {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Please enter your message: ");
-        String str = scan.nextLine();
-
-        ServerConnector.OutToServer().writeBytes("sendMail" + "\n");
-        ServerConnector.OutToServer().writeBytes(str + "\n");
-
-        System.out.println("Message sent!");
-        press_enter();
+        System.out.println("payments you paid: " + str);
     }
 }
