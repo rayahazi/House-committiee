@@ -11,7 +11,14 @@ import java.sql.SQLException;
 // abstract class 
 public abstract class User {
 
-	// Constructor:
+    // Attributes:
+    protected ObjectInputStream inObject;
+    BufferedReader inFromClient;
+    DataOutputStream outToClient;
+    Socket incoming;
+    String username;
+	
+    // Constructor:
     public User(ObjectInputStream inObject, BufferedReader inFromClient, DataOutputStream outToClient, Socket incoming, String username) {
         this.inObject = inObject;
         this.inFromClient = inFromClient;
@@ -24,10 +31,4 @@ public abstract class User {
     
     // Menu: 
     public abstract void menu() throws IOException, SQLException;
-
-    protected ObjectInputStream inObject;
-    BufferedReader inFromClient;
-    DataOutputStream outToClient;
-    Socket incoming;
-    String username;
 }
