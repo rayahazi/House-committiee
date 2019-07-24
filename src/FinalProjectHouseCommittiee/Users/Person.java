@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 public abstract class Person {
 	
-	/* Function that will pop a message "PRESS ENTER TO CONTINUE" */
+	// Function for error(print 'press enter to continue')
 	static void press_enter() throws IOException {
 	    System.out.println("Press enter to continue");
 	    System.in.read();
