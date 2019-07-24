@@ -16,8 +16,7 @@ import FinalProjectHouseCommittiee.Server.User;
 
 public class Manager extends User {
 
-
-    // Menu function to show to user
+	// Menu function to show to user
 	public void menu() throws IOException {
         Scanner scan = new Scanner(System.in);
         while (true) {
