@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Main {
 
-	 /* vars */
+	 // Attributes:
 	 private static user User;
-	 private static Person live_user;
+	 private static Object live_user;
 	 
 	 // main function:
 	 public static void main(String args[]) {
@@ -105,7 +105,7 @@ public class Main {
 	     if (answer.matches("ok")){
 	         System.out.println("Connection succeed!");
 	         //live_user.enter_connection();
-	         live_user.menu();
+	         ((user) live_user).menu();
 	         return true;
 	     }
 	     else{
