@@ -40,7 +40,7 @@ public class Ternant extends Person {
     }
 
     // Function to see ternant's payments
-    private void check_what_paid() throws IOException {
+    private void Payments() throws IOException {
         String str;
         ServerConnector.OutToServer().writeBytes("get_Paid_Months" + "\n");
         str = ServerConnector.InFromServer().readLine();
