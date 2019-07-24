@@ -6,13 +6,13 @@ import java.net.Socket;
 
 public class ServerConnector {
 
-    /* vars for create connection */
+    // Attributes:
     private static Socket clientSocket;
     private static DataOutputStream outToServer;
     private static BufferedReader inFromServer;
     private static ObjectOutputStream outToServerObject;
 
-    //This function as create connection
+    // Create connection to local host:
     public static void create_connection() throws IOException {
         clientSocket = new Socket("localhost", 10001); //This new object contain a call server
         try {
